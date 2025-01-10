@@ -30,7 +30,8 @@ app.get("/", (req, res) => {
   //3. Test to make sure that the random words display in the h1 element in index.ejs
 app.post("/submit", (req, res) => {
   const random = adj[Math.floor(Math.random() * adj.length)];
-  res.render("index.ejs", {adjective: random});
+  const random1 = noun[Math.floor(Math.random() * noun.length)];
+  res.render("index.ejs", {adjective: random, noun: random1,});
 
 });
 
